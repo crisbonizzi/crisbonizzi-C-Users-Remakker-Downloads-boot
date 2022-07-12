@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>cadastra-se</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+
+  </head>
+
+  <body bg-light>
+
+    <div class="home">
+      <div id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <img src="logos/logotrip.jpg" alt="" width="10%" height="auto" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="index.html"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end m-4" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Destinos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="dnacionais.html">Destinos Nacionais</a></li>
+                    <li><a class="dropdown-item" href="dinternacionais.html">Destinos Internacionais</a></li>
+                  </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="promocoes.html">Promoções</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    A empresa
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="quemsomos.html">Quem Somos</a></li>
+                    <li><a class="dropdown-item" href="contato.html">Contato</a></li>
+                    <li><a class="dropdown-item" href="cadastro.html">Cadastra-se</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+          <main class="container d-flex justify-content-right text-secondary flex-column my-2">
+            <h4>Saiba tudo sobre nossas promoções e ofertas</h4>
+            <h1>Cadastra-se para receber promoções de pacotes personalizados!</h1>
+
+    <form action="./clientes.html">
+        <!-- nome -->
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" name="nome" id="nome" class="form-control" required placeholder="Nome:">
+        
+        <!-- Email -->
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" name="email" id="email" class="form-control" required placeholder="Email:">
+
+        <!-- Genero -->
+        
+        
+
+        <!-- Data nascimento -->
+        <label for="data" class="form-label">Data nascimento:</label>
+        <input type="date" name="data" id="data" class="form-control" required>
+
+        <!-- Cidade -->
+        <label for="cidade" class="form-label">Cidade:</label>
+        <input type="text" id="cidade" class="form-control" required placeholder="Digite o nome da Cidade">
+
+        <!-- Estado -->
+        
+
+        <label for="estado" class="form-label">Estado:</label>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Escolha um estado</option>
+            <option value="1">São Paulo</option>
+            <option value="2">Rio de Janeiro</option>
+            <option value="3">Minas Gerais</option>
+            <option value="4">Bahia</option>
+          </select>
+        <!-- Telefone -->
+        <div class="mb-3">
+        <label for="tel" class="form-label">Telefone:</label>
+        <input type="tel" name="tel" id="tel" class="form-control" maxlength="11" required placeholder="Ex.: 11987542154">
+</div>
+        <!-- Button enviar -->
+        <input type="submit" class="btn btn-info" value="Enviar">
+
+        <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
+    </form>
+          </main>
+          <footer class="d-block align-items-center justify-content-center m-8 p-3 text-white">
+    <p class="" text-right>
+      &#9742;+55 (11) 3800-0000 | (11) 96311-6114 <Span> &#9993;atend1@toptrip.com.br </Span>
+      <br><br>
+
+      Top Trip Viagens Ltda - Me <br>
+
+      CNPJ: 64.000.441/0001-00 <br>
+
+      Condições Gerais / Contratos <br>
+
+      Política de Privacidade<br>
+
+      Meus Dados Pessoais <br>
+
+      Direitos do Consumidor
+    </p>
+    <br>
+    <div id="maps">
+      <p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.462773112692!2d-46.487001685383284!3d-23.587730668450806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce672c44fed437%3A0xba7c5a9100bb53b5!2sAvenida%20Aricanduva%2C%208256%20-%20Jardim%20Cinco%20de%20Julho%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003930-110!5e0!3m2!1sen!2sbr!4v1656439813784!5m2!1sen!2sbr"
+          width="40%" height="150px" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+    </div>
+    <p>
+      Av. Aricanduva, 8256 - Lojas 4 e 9 - Jardim Nove de Julho, São Paulo - SP
+      CEP: 03951-220
+
+      Endereço de Estacionamento : Rua Quebedo n°50
+    </p>
+    <div id="rodape">
+      <p> &#169; by Cristiane Mello </p>
+    </div>
+  </footer>
+    
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>

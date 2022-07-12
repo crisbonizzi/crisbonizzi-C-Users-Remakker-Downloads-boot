@@ -1,0 +1,81 @@
+body {
+    overflow-x: hidden;
+}
+
+.home {
+    min-height: 100vh;
+    width: 100vw;
+}
+    
+.navbar { 
+font-size: x-large;
+background: #61c7f3 !important;
+}
+
+.navbar :hover {
+    color: white;
+}
+
+
+    
+
+
+
+
+
+main {
+    width: 100%;
+    min-height: calc(100vh - 155px)
+}
+
+#img{
+    margin: 5px 20px 5px 40px;
+}
+#index{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+.destino{
+font-size:50px !important
+}
+
+
+
+#imgdestino{
+    margin: 0px 30px 0px 40px ;
+}
+#box{
+    max-width: 50%;
+	display: inline-block;
+    margin-bottom: 20px;
+}
+#empresa{
+    
+    
+    text-align: justify;
+}
+
+/* section {
+    width: calc(100% - 20px);
+    height: 50vh;
+    background-color: coral;
+    margin: 10px;
+} */
+
+footer {
+    width: 100%;
+    height: 500px;
+    background-color:cadetblue;
+    
+}
+
+#maps {
+    justify-content:left;
+    align-items:left !important
+}
+#rodape {
+    text-align: center;
+     ;
+}
