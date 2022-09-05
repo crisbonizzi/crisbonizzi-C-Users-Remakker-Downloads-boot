@@ -17,23 +17,19 @@ background: #61c7f3 !important;
 }
 
 
-    
-
-
-
-
-
 main {
     width: 100%;
     min-height: calc(100vh - 155px)
 }
 
 #img{
-    margin: 5px 20px 5px 40px;
+    margin: 0px 0px 0px 0px;
+    align-content: center;
 }
 #index{
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
 }
 
 
