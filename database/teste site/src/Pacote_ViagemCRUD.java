@@ -1,6 +1,4 @@
-import java.sql.Date;
 import java.util.Scanner;
-import java.text.SimpleDateFormat;
 
 public class Pacote_ViagemCRUD {
 

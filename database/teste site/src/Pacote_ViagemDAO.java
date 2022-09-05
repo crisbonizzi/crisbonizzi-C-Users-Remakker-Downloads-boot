@@ -1,7 +1,6 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,8 +28,6 @@ public class Pacote_ViagemDAO {
 			pstm.setString(2, pacote_viagem.getAcomodacao());
 			
 			pstm.setDouble(3, pacote_viagem.getPreco_pacote());
-			
-			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
 			pstm.setInt(4,pacote_viagem.getPassagens().getId());
 			
@@ -87,16 +84,11 @@ public class Pacote_ViagemDAO {
 					
 					Compra compra = new Compra();
 					
-					
-					
 					pacote_viagens.setHoteis(rset.getString("hoteis"));
 
 					pacote_viagens.setAcomodacao(rset.getString("acomodacao"));
 					
 					pacote_viagens.setPreco_pacote(rset.getDouble("preco_pacote"));
-
-
-					SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 					
 					compra.setId(rset.getInt("id_compra"));
 
@@ -148,8 +140,6 @@ public class Pacote_ViagemDAO {
 				pstm.setString(2, pacote_viagem.getAcomodacao());
 				
 				pstm.setDouble(3, pacote_viagem.getPreco_pacote());
-				
-				SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
 				pstm.setInt(4,pacote_viagem.getPassagens().getId());
 				
@@ -233,9 +223,6 @@ public class Pacote_ViagemDAO {
 				pacote_viagens.setAcomodacao(rset.getString("acomodacao"));
 				
 				pacote_viagens.setPreco_pacote(rset.getDouble("preco_pacote"));
-
-
-				SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 				
 				compra.setId(rset.getInt("id_compra"));
 

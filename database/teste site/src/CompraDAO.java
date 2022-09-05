@@ -1,7 +1,7 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.text.SimpleDateFormat;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,21 +24,17 @@ public class CompraDAO {
 			
 			// Adicionar o valor do primeiro parametro da sql
 			
-			pstm.setDouble(1, compra.getValor());
+			pstm.setDouble(1, compra.getValor_compra());
 
-			pstm.setString(2, compra.getData());
+			pstm.setString(2, compra.getData_compra());
 			
 			pstm.setString(3, compra.getQtd_itens());
 			
+			pstm.setInt(4, compra.getCliente_Cadastro().getId());
+
+			pstm.setInt(5, compra.getPassagens().getId());
 			
-
-			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-
-			pstm.setInt(5, compra.getCliente_Cadastro().getId());
-
-			pstm.setInt(6, compra.getPassagens().getId());
-			
-			pstm.setInt(7, compra.getPacote_Viagem().getId());
+			pstm.setInt(6, compra.getPacote_Viagem().getId());
 
 			// Executar a sql para inser��o dos dados
 			
@@ -91,13 +87,9 @@ public class CompraDAO {
 					
 					compras.setValor(rset.getDouble("valor_compra"));
 
-					compras.setData(rset.getString("data"));
+					compras.setData(rset.getString("data_compra"));
 					
-					compras.setQtd_itens(rset.getString("qtd_itens"));
-					
-					
-
-					SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+					compras.setQtd_itens(rset.getString("qtd_itens_compra"));
 					
 
 					cliente_cadastro.setId(rset.getInt("id_cliente_cadastro"));
@@ -150,21 +142,17 @@ public class CompraDAO {
 
 				pstm = conn.prepareStatement(sql);
 
-				pstm.setDouble(1, compra.getValor());
+				pstm.setDouble(1, compra.getValor_compra());
 
-				pstm.setString(2, compra.getData());
+				pstm.setString(2, compra.getData_compra());
 				
 				pstm.setString(3, compra.getQtd_itens());
 				
+				pstm.setInt(4, compra.getCliente_Cadastro().getId());
+
+				pstm.setInt(5, compra.getPassagens().getId());
 				
-
-				SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-
-				pstm.setInt(5, compra.getCliente_Cadastro().getId());
-
-				pstm.setInt(6, compra.getPassagens().getId());
-				
-				pstm.setInt(7, compra.getPacote_Viagem().getId());
+				pstm.setInt(6, compra.getPacote_Viagem().getId());
 
 				pstm.execute();
 
@@ -245,7 +233,7 @@ public class CompraDAO {
 				
 				
 
-				SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+				
 				
 
 				cliente_cadastro.setId(rset.getInt("id_cliente_cadastro"));

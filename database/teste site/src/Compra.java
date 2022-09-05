@@ -1,18 +1,17 @@
 
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.Date;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+
+
 
 public class Compra {
 
 	// Atributos
 
 	private Integer id;
-	private double valor;
-	private LocalDate data;
-	private String qtd_itens;
+	private double valor_compra;
+	private String  data_compra;
+	private String qtd_itens_compra;
 
 	private Cliente_Cadastro cliente_cadastro;
 	private Pacote_Viagem pacote_viagem;
@@ -20,8 +19,6 @@ public class Compra {
 
 	private List<Compra> itens = new ArrayList<Compra>();
 
-	// classe responsavel por formatar um padrao diferente do formato ISO
-	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 	// Construtores
 
@@ -29,17 +26,13 @@ public class Compra {
 
 	}
 
-	public Compra(int id, double valor, String data, String qtd_itens, Cliente_Cadastro cliente_cadastro,
+	public Compra(int id, double valor_compra, String data_compra, String qtd_itens_compra, Cliente_Cadastro cliente_cadastro,
 			Pacote_Viagem pacote_viagem, Passagens passagens) {
 
 		this.id = id;
-		
-		// convertendo data do tipo String ("dd/MM/yyyy") para LocalDate (yyyy-MM-dd)
-
-		this.data = LocalDate.parse(data, formatter);
-		
-		this.valor = valor;
-		this.qtd_itens = qtd_itens;
+		this.data_compra = data_compra;
+		this.valor_compra = valor_compra;
+		this.qtd_itens_compra = qtd_itens_compra;
 		this.cliente_cadastro = cliente_cadastro;
 		this.pacote_viagem = pacote_viagem;
 		this.passagens = passagens;
@@ -55,30 +48,30 @@ public class Compra {
 		this.id = id;
 	}
 
-	public double getValor() {
+	public double getValor_compra() {
 		return valor();
 	}
 
 	public void setValor(double valor) {
-		this.valor = valor;
+		this.valor_compra = valor;
 	}
 
 	// convertendo data do tipo LocalDate (yyyy-MM-dd) para String (dd/MM/yyyy)
 
-	public String getData() {
-		return formatter.format(data);
+	public String getData_compra() {
+		return data_compra;
 	}
 
-	public void setData(String data) {
-		this.data = LocalDate.parse(data, formatter);
+	public void setData(String data_compra) {
+		this.data_compra = data_compra;
 	}
 
 	public String getQtd_itens() {
-		return qtd_itens;
+		return qtd_itens_compra;
 	}
 
 	public void setQtd_itens(String qtd_itens) {
-		this.qtd_itens = qtd_itens;
+		this.qtd_itens_compra = qtd_itens;
 	}
 
 	public Cliente_Cadastro getCliente_Cadastro() {
@@ -110,15 +103,17 @@ public class Compra {
 	@Override
 
 	public String toString() {
-		return "Compra [id=" + id + ", data=" + data + ", valor=" + valor + ", qtd_itens=" + qtd_itens
+		return "Compra [id=" + id + ", data=" + data_compra + ", valor=" + valor_compra + ", qtd_iten=" + qtd_itens_compra
 				+ " cliente_cadastro=" + cliente_cadastro + ", pacote_viagem=" + pacote_viagem + ", passagens="
 				+ passagens + "]";
 	}
 
 	public double valor() {
 		for (int i = 0; i < itens.size(); i++) {
-			this.valor += itens.get(i).getValor();
+			this.valor_compra += itens.get(i).getValor_compra();
 		}
-		return this.valor;
+		return this.valor_compra;
+		
+		
 	}
 }

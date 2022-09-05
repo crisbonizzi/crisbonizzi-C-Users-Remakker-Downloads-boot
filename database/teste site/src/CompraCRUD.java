@@ -1,6 +1,4 @@
-import java.sql.Date;
 import java.util.Scanner;
-import java.text.SimpleDateFormat;
 
 
 public class CompraCRUD {
@@ -21,9 +19,9 @@ public class CompraCRUD {
 				
 
 				int id = 0;
-				double valor= 0;
-				String data ="";
-				String qtd_itens ="";
+				double valor_compra= 0;
+				String data_compra="";
+				String qtd_itens_compra ="";
 				
 				int id_cliente_cadastro = 0;
 				int id_passagem = 0;
@@ -45,13 +43,13 @@ public class CompraCRUD {
 					case 1:
 						// CREATE
 						System.out.println("Digite o valor da compra: ");
-						valor = s.nextDouble();
+						valor_compra = s.nextDouble();
 						
 						System.out.println("Digite a data de compra ");
-						data = s.next();
+						data_compra = s.next();
 						
 						System.out.println("Digite a quantidade de itens");
-						qtd_itens= s.next();
+						qtd_itens_compra= s.next();
 					
 					
 						System.out.println("Digite o id do cliente: ");
@@ -71,7 +69,7 @@ public class CompraCRUD {
 						Pacote_Viagem pacote_viagem = pacote_viagemDAO.getPacote_ViagemById(id_pacote_viagem);
 						
 						
-						Compra cp1 = new Compra (id, valor, data, qtd_itens, cliente_cadastro, pacote_viagem, passagens);
+						Compra cp1 = new Compra (id, valor_compra, data_compra, qtd_itens_compra, cliente_cadastro, pacote_viagem, passagens);
 						
 						compraDAO.save(cp1);
 						
@@ -81,7 +79,8 @@ public class CompraCRUD {
 					case 2:
 						// READ
 						for (Compra cp: compraDAO.getCompra()) {
-							System.out.println("Id: " + cp.getId() + " Valor: " + cp.getValor() + " Data: " + cp.getData()
+							
+							System.out.println("Id: " + cp.getId() + " Valor: " + cp.getValor_compra() + " Data: " + cp.getData_compra()
 							+ " Qtd_itens: " + cp.getQtd_itens() 
 							+ " Cliente_Cadastro: "+ cp.getCliente_Cadastro() +" Pacote_Viagem:" + cp.getPacote_Viagem() + " Passagens:" + cp.getPassagens());
 						}
@@ -95,13 +94,13 @@ public class CompraCRUD {
 						id = s.nextInt();
 						s.nextLine();
 						System.out.println("Digite o valor da compra: ");
-						valor = s.nextDouble();
+						valor_compra = s.nextDouble();
 						
 						System.out.println("Digite a data de compra ");
-						data = s.next();
+						data_compra = s.next();
 						
 						System.out.println("Digite a quantidade de itens");
-						qtd_itens= s.next();
+						qtd_itens_compra= s.next();
 					
 					
 						System.out.println("Digite o id do cliente: ");
@@ -120,7 +119,7 @@ public class CompraCRUD {
 						Passagens passagens1 = passagensDAO.getPassagensById(id_passagem);
 						Pacote_Viagem pacote_viagens = pacote_viagemDAO.getPacote_ViagemById(id_pacote_viagem);
 						
-						Compra cp2 = new Compra (id, valor, data, qtd_itens, cliente_cadastros, pacote_viagens, passagens1);
+						Compra cp2 = new Compra (id, valor_compra, data_compra, qtd_itens_compra, cliente_cadastros, pacote_viagens, passagens1);
 					
 						compraDAO.update(cp2);
 			
@@ -142,7 +141,7 @@ public class CompraCRUD {
 						
 						Compra cp3 = compraDAO.getCompraById(id);
 						
-						System.out.println("Id: " + cp3.getId() + " Valor: " + cp3.getValor() + " Data: " + cp3.getData()
+						System.out.println("Id: " + cp3.getId() + " Valor: " + cp3.getValor_compra() + " Data: " + cp3.getData_compra()
 						+ " Qtd_itens: " + cp3.getQtd_itens() 
 						+ " Cliente_Cadastro: "+ cp3.getCliente_Cadastro() +" Pacote_Viagem:" + cp3.getPacote_Viagem() + " Passagens:" + cp3.getPassagens());
 						

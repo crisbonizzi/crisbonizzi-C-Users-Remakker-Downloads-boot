@@ -1,7 +1,6 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,9 +30,7 @@ public class PassagensDAO {
 			
 			pstm.setString(3, passagens.getData_volta_passagem());
 			
-			pstm.setString(4, passagens.getOrigem());
-
-			
+			pstm.setString(4, passagens.getOrigem_passagem());
 
 			pstm.setInt(5, passagens.getCompra().getId());
 
@@ -92,14 +89,11 @@ public class PassagensDAO {
 					
 					passagem.setPreco(rset.getDouble("preco_passagem"));
 
-					passagem.setData_ida_passagem(rset.getString("data_ida"));
+					passagem.setData_ida_passagem(rset.getString("data_ida_passagem"));
 					
-					passagem.setData_volta_passagem(rset.getString("data_volta"));
+					passagem.setData_volta_passagem(rset.getString("data_volta_passagem"));
 					
-					passagem.setOrigem(rset.getString("origem"));
-
-					
-					
+					passagem.setOrigem_passagem(rset.getString("origem_passagem"));
 
 					compra.setId(rset.getInt("id_compra"));
 
@@ -157,10 +151,8 @@ public class PassagensDAO {
 				
 				pstm.setString(3, passagens.getData_volta_passagem());
 				
-				pstm.setString(4, passagens.getOrigem());
+				pstm.setString(4, passagens.getOrigem_passagem());
 				
-				
-
 				
 				pstm.setInt(5, passagens.getCompra().getId());
 
@@ -240,11 +232,11 @@ public class PassagensDAO {
 
 				passagem.setPreco(rset.getDouble("preco_passagem"));
 
-				passagem.setData_ida_passagem(rset.getString("data_ida"));
+				passagem.setData_ida_passagem(rset.getString("data_ida_passagem"));
 				
-				passagem.setData_volta_passagem(rset.getString("data_volta"));
+				passagem.setData_volta_passagem(rset.getString("data_volta_passagem"));
 				
-				passagem.setOrigem(rset.getString("origem"));
+				passagem.setOrigem_passagem(rset.getString("origem_passagem"));
 
 				
 				
